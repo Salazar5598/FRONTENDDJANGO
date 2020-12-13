@@ -1,5 +1,28 @@
 .content {
-    padding: 1rem;
-    display: flex;
-    justify-content: center;
-  }
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+}
+.navTech {
+  background-color: #031C32 !important;
+  color: #B3365B !important;
+}
+.navtecha{
+  color: #B3365B !important;
+}
+.btnNAv {
+  background-color: #031C32;
+  border: none;
+  color: #B3365B;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 3px 2px;
+  cursor: pointer;
+}
+i.icon-tech {
+  color: #B3365B;
+  background-color: #031C32 !important;
+}
