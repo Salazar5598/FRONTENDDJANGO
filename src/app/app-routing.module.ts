@@ -41,6 +41,10 @@ const routes: Routes = [
     path: 'contratosmnat',
     component: ContratosmantenimientoComponent
   },
+  {
+    path: 'contratosmnat/:id',
+    component: ContratosmantenimientoComponent
+  },
 ];
 
 @NgModule({
