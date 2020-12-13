@@ -9,13 +9,23 @@ import { LoginComponent } from './login/login.component';
 import { ServiciosComponent } from './servicios/servicios.component';
 import { FormsModule } from '@angular/forms';
 import { ServiciosmantenimientoComponent } from './serviciosmantenimiento/serviciosmantenimiento.component';
+import { ClientesComponent } from './clientes/clientes.component';
+import { ClientesmatenimientoComponent } from './clientesmatenimiento/clientesmatenimiento.component';
+import { ContratosComponent } from './contratos/contratos.component';
+import { ContratosmantenimientoComponent } from './contratosmantenimiento/contratosmantenimiento.component';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     ServiciosComponent,
-    ServiciosmantenimientoComponent
+    ServiciosmantenimientoComponent,
+    ClientesComponent,
+    ClientesmatenimientoComponent,
+    ContratosComponent,
+    ContratosmantenimientoComponent
   ],
   imports: [
     BrowserModule,
