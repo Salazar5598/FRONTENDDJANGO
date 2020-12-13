@@ -47,7 +47,7 @@ query ($id: Int!){
 const Contrato_Insert_Query = gql`
 mutation Contrato_Insert_Query(
   $costo: Int!
-  $fecha: Date!
+  $fecha: String!
   $id_cliente: ID!
   $id_servicio: ID!
 ){
@@ -66,7 +66,7 @@ const Contrato_Update_Query = gql`
 mutation Contrato_Update_Query(
   $id: Int!
   $costo: Int!
-  $fecha: Date!
+  $fecha: String!
   $id_cliente: ID!
   $id_servicios: ID!
 ){
