@@ -22,6 +22,10 @@ const routes: Routes = [
     component: ServiciosmantenimientoComponent
   },
   {
+    path: 'serviciosmant/:id',
+    component: ServiciosmantenimientoComponent
+  },
+  {
     path: 'clientes',
     component: ClientesComponent
   },
