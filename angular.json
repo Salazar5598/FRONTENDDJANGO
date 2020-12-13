@@ -126,6 +126,6 @@
   },
   "defaultProject": "FrontendAngular",
   "cli": {
-    "analytics": "a592d575-e878-4844-800a-83871fad365e"
+    "analytics": false
   }
 }

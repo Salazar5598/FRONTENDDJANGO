@@ -1,1 +1,43 @@
-<p>contratosmantenimiento works!</p>
+<div class="container" style="margin-top: 5rem;">
+<section >
+    <div class="row">
+    <h3 class="center-align">Contrato</h3>
+        <article class="col s6 offset-s3">
+            <form method="POST" action="formulario-contacto.php">
+
+                <div class="input-field">
+                    <i class="material-icons prefix">payments</i>
+                    <label for="costo">Costo</label>
+                    <input type="text" name="costo" required [(ngModel)]="costo" [ngModelOptions]="{standalone: true}">
+                </div>
+
+                <div class="input-field">
+                    <i class="material-icons prefix">event_available</i>
+                    <label for="fecha">Fecha</label>
+                    <input type="text" class="datepicker" [(ngModel)]="fecha" [ngModelOptions]="{standalone: true}">
+                </div>
+
+                <select class="form-control" id="cliente" [(ngModel)]="id_cliente" [ngModelOptions]="{standalone: true}">
+                    <option *ngFor="let cliente of Cliente" value="{{cliente.id}}">{{cliente.nombre}} {{cliente.apellido}}</option>
+                </select>
+
+                <select class="form-control" id="servicio" [(ngModel)]="id_servicio" [ngModelOptions]="{standalone: true}" style="margin-top: 2rem;">
+                    <option *ngFor="let servicio of Servicio" value="{{servicio.id}}">{{servicio.servicio}}</option>
+                </select>
+                
+                <p class="center-align" style="margin-top: 2rem;">
+                    <button class="waves-effect waves-light btn" (click)="Insertar()"><i class="material-icons right">{{icono}}</i>enviar</button>
+                </p>
+
+            </form>
+
+        </article>
+    </div>
+</section>
+</div>
+
+<script>
+    $(document).ready(function(){
+    $('.datepicker').datepicker();
+    });
+  </script>

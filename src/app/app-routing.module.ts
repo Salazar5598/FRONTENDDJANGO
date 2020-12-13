@@ -7,7 +7,9 @@ import { ClientesComponent } from './clientes/clientes.component';
 import { ClientesmatenimientoComponent } from './clientesmatenimiento/clientesmatenimiento.component';
 import { ContratosComponent } from './contratos/contratos.component';
 import { ContratosmantenimientoComponent } from './contratosmantenimiento/contratosmantenimiento.component';
-
+import { InicioComponent } from './inicio/inicio.component';
+import { UsuariosComponent } from './usuarios/usuarios.component';
+import { UsuariosmantenimientoComponent } from './usuariosmantenimiento/usuariosmantenimiento.component';
 const routes: Routes = [
   {
     path: '',
@@ -19,6 +21,10 @@ const routes: Routes = [
   },
   {
     path: 'serviciosmant',
+    component: ServiciosmantenimientoComponent
+  },
+  {
+    path: 'serviciosmant/:id',
     component: ServiciosmantenimientoComponent
   },
   {
@@ -41,6 +47,26 @@ const routes: Routes = [
     path: 'contratosmnat',
     component: ContratosmantenimientoComponent
   },
+  {
+    path: 'contratosmnat/:id',
+    component: ContratosmantenimientoComponent
+  },
+  {
+    path: 'inicio',
+    component: InicioComponent
+  },
+  {
+    path: 'usuarios',
+    component: UsuariosComponent
+  },
+  {
+    path : 'usuariosmnat',
+    component : UsuariosmantenimientoComponent
+  },
+  {
+    path : 'usuariosmnat/:id',
+    component : UsuariosmantenimientoComponent
+  }  
 ];
 
 @NgModule({

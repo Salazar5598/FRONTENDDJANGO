@@ -1,35 +1,21 @@
-<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-  <div class="mdl-layout__header mdl-layout__header--waterfall">
-    <div class="mdl-layout__header-row">
-      <span class="mdl-layout-title" routerLink="/">
-        <i class="material-icons">home</i> Know Tech
-      </span>
-      <!-- Add spacer, to align navigation to the right in desktop -->
-      <div class="mdl-layout-spacer"></div>
-      <!-- Navigation -->
-      <ul class="mdl-navigation">
-        <li class="mdl-navigation__link" routerLink="/contratos">Contratos</li>
-        <li class="mdl-navigation__link" routerLink="/servicios">Servicios</li>
-        <li class="mdl-navigation__link" routerLink="/clientes">Clientes</li>
-        <li
-          class="mdl-navigation__link"
-          *ngIf="!isAuthenticated"
-          (click)="login()"
-        >
-          Login
-        </li>
-        <li
-          class="mdl-navigation__link"
-          *ngIf="isAuthenticated"
-          (click)="logout()"
-        >
-          Logout
-        </li>
+
+ <nav>
+    <div class="nav-wrapper navTech">
+   
+      <a routerLink="/inicio" class="brand-logo navtecha"> <img src="assets/images/KnowTech.ico" style="width:  60px; height: 58px;" alt="" /> K-now Tech</a>
+      <ul class="right hide-on-med-and-down">
+        
+        <li><a routerLink="/contratos"><i class="material-icons right icon-tech">assignment</i> </a></li>
+        <li><a routerLink="/servicios"><i class="material-icons icon-tech" >desktop_mac</i></a></li>
+        <li><a routerLink="/clientes"><i class="material-icons icon-tech ">perm_contact_calendar</i></a></li>
+        <li><a  *ngIf="!isAuthenticated" (click)="login()">Login</a> </li>
+        <!-- ad  <li><a href="#!"class="waves-effect waves-light btn-large btnNAv">Contacto</a></li> -->
+        <li><a  *ngIf="isAuthenticated" (click)="logout()">Salir</a> </li>
+        
       </ul>
     </div>
-  </div>
-</div>
-
+  </nav>
   <div class="">
     <router-outlet></router-outlet>
   </div>
+

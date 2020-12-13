@@ -1,60 +1,59 @@
 import { Component, OnInit } from '@angular/core';
 import { Apollo, QueryRef } from 'apollo-angular';
 import gql from 'graphql-tag';
-
 import { ActivatedRoute } from '@angular/router';
-const Servicio_Query = gql`
+const Usuario_Query = gql`
 query ($id: Int!){
-  servicio(id: $id){
+  usuario(id: $id){
     id
-    servicio
-    descripcion
+    usuario
+    password
   }
 }
 `;
 
-const Servicio_Update_Query = gql `
-  mutation Servicio_Update_Query(
+const Usuario_Update_Query = gql `
+  mutation Usuario_Update_Query(
     $id: Int!
-    $servicio: String!
-    $descripcion: String!
+    $usuario: String!
+    $password: String!
   ){
-    updateServicio(id: $id, input: {
-      servicio: $servicio
-      descripcion: $descripcion
+    updateUsuario(id: $id, input: {
+      usuario: $usuario
+      password: $password
     }){
       ok
     }
   }
 `;
 
-const Servicio_Insert_Query = gql`
-mutation Servicio_Insert_Query(
-  $servicio: String!
-  $descripcion: String!
+const Usuario_Insert_Query = gql`
+mutation Usuario_Insert_Query(
+  $usuario: String!
+  $password: String!
 ){
-  createServicio(input: {
-    servicio: $servicio
-    descripcion: $descripcion
+  createUsuario(input: {
+    usuario: $usuario
+    password: $password
   }){
     ok
   }
 }
 `;
 @Component({
-  selector: 'app-serviciosmantenimiento',
-  templateUrl: './serviciosmantenimiento.component.html',
-  styleUrls: ['./serviciosmantenimiento.component.css']
+  selector: 'app-usuariosmantenimiento',
+  templateUrl: './usuariosmantenimiento.component.html',
+  styleUrls: ['./usuariosmantenimiento.component.css']
 })
-export class ServiciosmantenimientoComponent implements OnInit {
+export class UsuariosmantenimientoComponent implements OnInit {
   id: any;
   edit: boolean = false;
   icono: String = "send";
-  elServicio: any = [];
+  elUsuario: any = [];
   private query: any;
 
-  servicio: string = ""
-  descripcion: string  = ""
+  usuario: string = ""
+  password: string  = ""
   constructor(private apollo: Apollo, private activateRoute: ActivatedRoute){
     this.id = this.activateRoute.snapshot.params['id'];
       if(this.id){
@@ -63,14 +62,14 @@ export class ServiciosmantenimientoComponent implements OnInit {
         //select por id
 
         this.query = this.apollo.watchQuery<any>({
-          query: Servicio_Query,
+          query: Usuario_Query,
           variables: {
             id: this.id,
           }
         }).valueChanges.subscribe( result => {
-          this.elServicio = result.data && result.data.servicio;
-          this.servicio = this.elServicio["servicio"]
-          this.descripcion = this.elServicio["descripcion"]
+          this.elUsuario = result.data && result.data.usuario;
+          this.usuario = this.elUsuario["usuario"]
+          this.password = this.elUsuario["password"]
         })
 
         // hasta aqui
@@ -80,19 +79,20 @@ export class ServiciosmantenimientoComponent implements OnInit {
       }
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+  }
 
   Insertar(){
-    (this.servicio == "")? console.log("vacio") : this.edit? this.actualizar() : this.crear() ;
+    (this.usuario == "")? console.log("vacio") : this.edit? this.actualizar() : this.crear() ;
   }
 
   actualizar(){
     this.apollo.mutate({
-      mutation: Servicio_Update_Query,
+      mutation: Usuario_Update_Query,
       variables: {
         id: this.id,
-        servicio: this.servicio,
-        descripcion: this.descripcion,
+        usuario: this.usuario,
+        password: this.password,
       }
     }).subscribe(( data ) => {
       console.log(data)
@@ -102,13 +102,12 @@ export class ServiciosmantenimientoComponent implements OnInit {
       console.log('there was an error sending the query', error);
     });
   }
-
   crear(){
     this.apollo.mutate({
-      mutation: Servicio_Insert_Query,
+      mutation: Usuario_Insert_Query,
       variables: {
-        servicio: this.servicio,
-        descripcion: this.descripcion
+        usuario: this.usuario,
+        password: this.password
       }
     }).subscribe(( data ) => {
       console.log(data)
