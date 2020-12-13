@@ -12,4 +12,7 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  Ingresar() {
+    console.log("hola");
+  }
 }

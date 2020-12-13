@@ -1,26 +1,31 @@
-<section >
-    <div class="row">
-    <h3 class="center-align">SERVICIO</h3>
-        <article class="col s6 offset-s3">
-            <form method="POST" action="formulario-contacto.php">
-                <div class="input-field">
-                    <i class="material-icons prefix">build</i>
-                    <label for="servicio">Servicio</label>
-                    <input type="text" name="servicio" required [(ngModel)]="servicio" [ngModelOptions]="{standalone: true}">
-                </div>
+<div class="container" style="margin-top: 5rem;">
+    <section>
+        <div class="row">
+            <h3 class="center-align">SERVICIO</h3>
+            <article class="col s6 offset-s3">
+                <form method="POST" action="formulario-contacto.php">
+                    <div class="input-field">
+                        <i class="material-icons prefix">build</i>
+                        <label for="servicio">Servicio</label>
+                        <input type="text" name="servicio" required [(ngModel)]="servicio"
+                            [ngModelOptions]="{standalone: true}">
+                    </div>
 
-                <div class="input-field">
-                    <i class="material-icons prefix">business_center</i>
-                    <label for="descripcion">Descripcion</label>
-                    <input type="text" name="descripcion" required [(ngModel)]="descripcion" [ngModelOptions]="{standalone: true}">
-                </div>
-                
-                <p class="center-align">
-                    <button class="waves-effect waves-light btn" (click)="Insertar()"><i class="material-icons right">{{icono}}</i>enviar</button>
-                </p>
+                    <div class="input-field">
+                        <i class="material-icons prefix">business_center</i>
+                        <label for="descripcion">Descripcion</label>
+                        <input type="text" name="descripcion" required [(ngModel)]="descripcion"
+                            [ngModelOptions]="{standalone: true}">
+                    </div>
 
-            </form>
+                    <p class="center-align">
+                        <button class="waves-effect waves-light btn" (click)="Insertar()"><i
+                                class="material-icons right">{{icono}}</i>enviar</button>
+                    </p>
 
-        </article>
-    </div>
-</section>
+                </form>
+
+            </article>
+        </div>
+    </section>
+</div>
