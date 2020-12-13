@@ -2,15 +2,15 @@
   <div class="mdl-layout__header mdl-layout__header--waterfall">
     <div class="mdl-layout__header-row">
       <span class="mdl-layout-title" routerLink="/">
-        <i class="material-icons">home</i> Angular with GraphQL
+        <i class="material-icons">home</i> Know Tech
       </span>
       <!-- Add spacer, to align navigation to the right in desktop -->
       <div class="mdl-layout-spacer"></div>
       <!-- Navigation -->
       <ul class="mdl-navigation">
-        <li class="mdl-navigation__link" routerLink="/">Home</li>
-        <li class="mdl-navigation__link" routerLink="/players">Players</li>
-        <li class="mdl-navigation__link" routerLink="/ranking">Rankings</li>
+        <li class="mdl-navigation__link" routerLink="/contratos">Contratos</li>
+        <li class="mdl-navigation__link" routerLink="/servicios">Servicios</li>
+        <li class="mdl-navigation__link" routerLink="/clientes">Clientes</li>
         <li
           class="mdl-navigation__link"
           *ngIf="!isAuthenticated"
@@ -28,28 +28,7 @@
       </ul>
     </div>
   </div>
-
-  <div class="mdl-layout__drawer">
-    <ul class="mdl-navigation">
-      <li class="mdl-navigation__link" routerLink="/">Home</li>
-      <li class="mdl-navigation__link" routerLink="/servicios">Servicios</li>
-      <li class="mdl-navigation__link" routerLink="/serviciosmant">Form Servicios</li>
-      <li
-        class="mdl-navigation__link"
-        *ngIf="!isAuthenticated"
-        (click)="login()"
-      >
-        Login
-      </li>
-      <li
-        class="mdl-navigation__link"
-        *ngIf="isAuthenticated"
-        (click)="logout()"
-      >
-        Logout
-      </li>
-    </ul>
-  </div>
+</div>
 
   <div class="mdl-layout__content content">
     <router-outlet></router-outlet>

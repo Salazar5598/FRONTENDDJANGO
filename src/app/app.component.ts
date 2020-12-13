@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'FrontendAngular';
+  isAuthenticated = true
+
+  logout(){}
+  login(){}
 }

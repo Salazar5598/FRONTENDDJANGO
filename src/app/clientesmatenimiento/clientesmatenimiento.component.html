@@ -1,1 +1,46 @@
-<p>clientesmatenimiento works!</p>
+<section >
+    <div class="row">
+    <h3 class="center-align">CONTACTO</h3>
+        <article class="col s6 offset-s3">
+            <form method="POST" action="formulario-contacto.php">
+                <div class="input-field">
+                    <i class="material-icons prefix">perm_identity</i>
+                    <label for="nombre">Nombre</label>
+                    <input type="text" name="nombre" required [(ngModel)]="nombre" [ngModelOptions]="{standalone: true}">
+                </div>
+
+                <div class="input-field">
+                    <i class="material-icons prefix">person_pin</i>
+                    <label for="apellido">Apellido</label>
+                    <input type="text" name="apellido" required [(ngModel)]="apellido" [ngModelOptions]="{standalone: true}">
+                </div>
+                
+                <div class="input-field">
+                    <i class="material-icons prefix">email</i>
+                    <label for="email">Email</label>
+                    <input type="email" name="email" required [(ngModel)]="email" [ngModelOptions]="{standalone: true}">
+                </div>
+
+                <div class="input-field">
+                    <i class="material-icons prefix">call</i>
+                    <label for="telefono">Telefono</label>
+                    <input type="text" name="telefono" required [(ngModel)]="telefono" [ngModelOptions]="{standalone: true}">
+                </div>
+
+                <div class="input-field">
+                    <i class="material-icons prefix">hourglass_full</i>
+                    <label for="edad">Edad</label>
+                    <input type="text" name="edad" required [(ngModel)]="edad" [ngModelOptions]="{standalone: true}">
+                </div>
+
+               
+                
+                <p class="center-align">
+                    <button class="waves-effect waves-light btn" (click)="Insertar()"><i class="material-icons right">{{icono}}</i>enviar</button>
+                </p>
+
+            </form>
+
+        </article>
+    </div>
+</section>

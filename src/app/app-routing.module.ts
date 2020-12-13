@@ -30,6 +30,10 @@ const routes: Routes = [
     component: ClientesmatenimientoComponent
   },
   {
+    path: 'clientesmant/:id',
+    component: ClientesmatenimientoComponent
+  },
+  {
     path: 'contratos',
     component: ContratosComponent
   },
