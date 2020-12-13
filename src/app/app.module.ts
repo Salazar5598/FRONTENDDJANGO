@@ -7,18 +7,22 @@ import { GraphQLModule } from './graphql.module';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
 import { ServiciosComponent } from './servicios/servicios.component';
+import { FormsModule } from '@angular/forms';
+import { ServiciosmantenimientoComponent } from './serviciosmantenimiento/serviciosmantenimiento.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    ServiciosComponent
+    ServiciosComponent,
+    ServiciosmantenimientoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     GraphQLModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
