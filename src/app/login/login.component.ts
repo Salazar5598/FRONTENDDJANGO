@@ -46,14 +46,13 @@ export class LoginComponent implements OnInit {
     {
       alert("Ingreso exitoso!");
       window.localStorage.setItem("auth","true")
-      window.location.reload();
-
+      this.router.navigate(['/contratos'])
       console.log(window.localStorage.getItem("auth"));
     }
     else
     {
       alert("Nombre de usuario y/o contraseña incorrectos!");
-      window.location.reload();
+      //window.location.reload();
     }
   }
 }

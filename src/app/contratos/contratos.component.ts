@@ -36,8 +36,8 @@ export class ContratosComponent implements OnInit {
       query: Contratos_QUERY
     });
     this.query.valueChanges.subscribe(result =>{
+      console.log(result.data && result.data.contratos);
       this.Contratos = result.data && result.data.contratos;
-      console.log(this.Contratos);
     });
   }
 
