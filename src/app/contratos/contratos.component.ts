@@ -5,6 +5,7 @@ import gql from 'graphql-tag';
 const Contratos_QUERY = gql`
 query{
   contratos{
+    id
     costo
     fecha
     clientes{

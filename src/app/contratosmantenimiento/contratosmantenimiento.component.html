@@ -17,11 +17,15 @@
                     <input type="text" class="datepicker" [(ngModel)]="fecha" [ngModelOptions]="{standalone: true}">
                 </div>
 
-                <select class="form-control" id="cliente">
-                    <option value=1>1</option>
+                <select class="form-control" id="cliente" [(ngModel)]="id_cliente" [ngModelOptions]="{standalone: true}">
+                    <option *ngFor="let cliente of Cliente" value="{{cliente.id}}">{{cliente.nombre}} {{cliente.apellido}}</option>
+                </select>
+
+                <select class="form-control" id="servicio" [(ngModel)]="id_servicio" [ngModelOptions]="{standalone: true}" style="margin-top: 2rem;">
+                    <option *ngFor="let servicio of Servicio" value="{{servicio.id}}">{{servicio.servicio}}</option>
                 </select>
                 
-                <p class="center-align">
+                <p class="center-align" style="margin-top: 2rem;">
                     <button class="waves-effect waves-light btn" (click)="Insertar()"><i class="material-icons right">{{icono}}</i>enviar</button>
                 </p>
 
