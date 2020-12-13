@@ -1,7 +1,10 @@
-<a class="btn-floating btn-large waves-effect waves-light" routerLink="/clientesmant"><i class="material-icons">add</i></a>
+<div class="right" style="margin-right: 2rem;">
+  <a class="btn-floating btn-large waves-effect waves-light" routerLink="/clientesmant"><i class="material-icons">add</i></a>
+</div>
 
-<div  *ngFor="let cliente of Clientes">
-      <div class="card small " style="border-radius: 2rem;" >
+<div class="container" style="margin-top: 5rem!;">
+<div  *ngFor="let cliente of Clientes" style="max-width: 1rem!;">
+      <div class="card small" style="border-radius: 2rem; max-width: 15rem;" >
         <div class="card-image waves-effect waves-block waves-light">
           <img class="activator" src="https://png.pngtree.com/png-vector/20190223/ourlarge/pngtree-profile-glyph-black-icon-png-image_691589.jpg" style="width:  17rem; height: 17rem;" >
         </div>
@@ -17,4 +20,5 @@
             <p>Telefono: {{cliente.telefono}}</p>
         </div>
       </div>
+</div>
 </div>
