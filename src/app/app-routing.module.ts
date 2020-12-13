@@ -8,6 +8,8 @@ import { ClientesmatenimientoComponent } from './clientesmatenimiento/clientesma
 import { ContratosComponent } from './contratos/contratos.component';
 import { ContratosmantenimientoComponent } from './contratosmantenimiento/contratosmantenimiento.component';
 import { InicioComponent } from './inicio/inicio.component';
+import { UsuariosComponent } from './usuarios/usuarios.component';
+import { UsuariosmantenimientoComponent } from './usuariosmantenimiento/usuariosmantenimiento.component';
 const routes: Routes = [
   {
     path: '',
@@ -53,6 +55,18 @@ const routes: Routes = [
     path: 'inicio',
     component: InicioComponent
   },
+  {
+    path: 'usuarios',
+    component: UsuariosComponent
+  },
+  {
+    path : 'usuariosmnat',
+    component : UsuariosmantenimientoComponent
+  },
+  {
+    path : 'usuariosmnat/:id',
+    component : UsuariosmantenimientoComponent
+  }  
 ];
 
 @NgModule({
