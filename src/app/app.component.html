@@ -1,21 +1,30 @@
+<div>
+  <ul id="dropdown1" class="dropdown-content">
+    <li><a >Listar</a></li>
+    <li><a >Crear</a></li>
+    <li class="divider"></li>
+    <li><a href="#!">Tipo de Producto</a></li>
+  </ul>
+</div>
+<nav>
+  <div class="nav-wrapper navTech">
 
- <nav>
-    <div class="nav-wrapper navTech">
-   
-      <a routerLink="/inicio" class="brand-logo navtecha"> <img src="assets/images/KnowTech.ico" style="width:  60px; height: 58px;" alt="" /> K-now Tech</a>
-      <ul class="right hide-on-med-and-down">
-        
-        <li><a routerLink="/contratos"><i class="material-icons right icon-tech">assignment</i> </a></li>
-        <li><a routerLink="/servicios"><i class="material-icons icon-tech" >desktop_mac</i></a></li>
-        <li><a routerLink="/clientes"><i class="material-icons icon-tech ">perm_contact_calendar</i></a></li>
-        <li><a  *ngIf="!isAuthenticated" (click)="login()">Login</a> </li>
-        <!-- ad  <li><a href="#!"class="waves-effect waves-light btn-large btnNAv">Contacto</a></li> -->
-        <li><a  *ngIf="isAuthenticated" (click)="logout()">Salir</a> </li>
-        
-      </ul>
-    </div>
-  </nav>
-  <div class="">
-    <router-outlet></router-outlet>
+    <a routerLink="/inicio" class="brand-logo navtecha"> <img src="assets/images/KnowTech.ico"
+        style="width:  60px; height: 58px;" alt="" /> K-now Tech</a>
+    <ul class="right hide-on-med-and-down">
+
+      <li><a routerLink="/contratos"><i class="material-icons right icon-tech">assignment</i> </a></li>
+      <li><a routerLink="/servicios"><i class="material-icons icon-tech">desktop_mac</i></a></li>
+      <li><a routerLink="/clientes"><i class="material-icons icon-tech ">perm_contact_calendar</i></a></li>
+      <li><a routerLink="/usuarios"><i class="material-icons icon-tech ">adb</i></a></li>
+
+      <li><a *ngIf="!isAuthenticated" (click)="login()">Login</a> </li>
+      <!-- ad  <li><a href="#!"class="waves-effect waves-light btn-large btnNAv">Contacto</a></li> -->
+      <li><a *ngIf="isAuthenticated" (click)="logout()">Salir</a> </li>
+
+    </ul>
   </div>
-
+</nav>
+<div class="">
+  <router-outlet></router-outlet>
+</div>
