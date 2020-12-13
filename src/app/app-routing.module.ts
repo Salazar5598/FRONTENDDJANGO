@@ -10,8 +10,7 @@ import { ContratosmantenimientoComponent } from './contratosmantenimiento/contra
 import { InicioComponent } from './inicio/inicio.component';
 import { UsuariosComponent } from './usuarios/usuarios.component';
 import { UsuariosmantenimientoComponent } from './usuariosmantenimiento/usuariosmantenimiento.component';
-import { ContactoComponent} from './contacto/contacto.component'
-
+import { ContactoComponent} from './contacto/contacto.component';
 
 const routes: Routes = [
   {
