@@ -7,7 +7,7 @@ import { ClientesComponent } from './clientes/clientes.component';
 import { ClientesmatenimientoComponent } from './clientesmatenimiento/clientesmatenimiento.component';
 import { ContratosComponent } from './contratos/contratos.component';
 import { ContratosmantenimientoComponent } from './contratosmantenimiento/contratosmantenimiento.component';
-
+import { InicioComponent } from './inicio/inicio.component';
 const routes: Routes = [
   {
     path: '',
@@ -48,6 +48,10 @@ const routes: Routes = [
   {
     path: 'contratosmnat/:id',
     component: ContratosmantenimientoComponent
+  },
+  {
+    path: 'inicio',
+    component: InicioComponent
   },
 ];
 

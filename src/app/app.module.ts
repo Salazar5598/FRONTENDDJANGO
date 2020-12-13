@@ -13,6 +13,7 @@ import { ClientesComponent } from './clientes/clientes.component';
 import { ClientesmatenimientoComponent } from './clientesmatenimiento/clientesmatenimiento.component';
 import { ContratosComponent } from './contratos/contratos.component';
 import { ContratosmantenimientoComponent } from './contratosmantenimiento/contratosmantenimiento.component';
+import { InicioComponent } from './inicio/inicio.component';
 
 
 
@@ -25,7 +26,8 @@ import { ContratosmantenimientoComponent } from './contratosmantenimiento/contra
     ClientesComponent,
     ClientesmatenimientoComponent,
     ContratosComponent,
-    ContratosmantenimientoComponent
+    ContratosmantenimientoComponent,
+    InicioComponent
   ],
   imports: [
     BrowserModule,
