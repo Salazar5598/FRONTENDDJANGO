@@ -20,8 +20,20 @@ export class ServiciosComponent implements OnInit {
 
   Servicios: any[] =[];
   private query: QueryRef<any>;
+
+  auth: boolean = false;
+  isAuth: any = "";
   
   constructor(private apollo:Apollo) {
+
+    this.isAuth = window.localStorage.getItem("auth");
+
+    if(this.isAuth == "false"){
+      this.auth = !this.auth;
+    }else{
+      this.auth = this.auth;
+    }
+
     this.query = this.apollo.watchQuery({
       query: Servicios_Query
     });
