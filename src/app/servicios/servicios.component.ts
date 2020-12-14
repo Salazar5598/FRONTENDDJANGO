@@ -27,11 +27,11 @@ export class ServiciosComponent implements OnInit {
   constructor(private apollo:Apollo) {
 
     this.isAuth = window.localStorage.getItem("auth");
-
+    console.log(this.isAuth);
     if(this.isAuth == "false"){
-      this.auth = !this.auth;
-    }else{
       this.auth = this.auth;
+    }else{
+      this.auth = !this.auth;
     }
 
     this.query = this.apollo.watchQuery({

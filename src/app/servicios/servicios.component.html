@@ -1,5 +1,5 @@
 <div *ngIf="auth" class="right" style="margin-right: 2rem;">
-  <a class="btn-floating btn-large waves-effect waves-light" routerLink="/serviciosmant"><i class="material-icons">add</i></a>
+  <a  class="btn-floating btn-large waves-effect waves-light" routerLink="/serviciosmant"><i class="material-icons">add</i></a>
 </div>
 <br>
 <br>
@@ -14,7 +14,7 @@
         </div>
         <div class="card-content">
           <span class="card-title activator grey-text text-darken-4">{{servicio.servicio}} <i class="material-icons right">more_vert</i></span>
-          <p><a routerLink="/serviciosmant/{{servicio.id}}">Edit</a></p>
+          <p><a *ngIf="auth" routerLink="/serviciosmant/{{servicio.id}}">Edit</a></p>
         </div>
         <div class="card-reveal">
           <span class="card-title grey-text text-darken-4">Descripcion<i class="material-icons right">close</i></span>
